@@ -1,10 +1,11 @@
-module github.com/DataDog/datadog-agent/pkg/proto
+module github.com/taloric/ddproto
 
 go 1.18.0
 
 retract v0.46.0-devel
 
 require (
+	github.com/DataDog/datadog-agent/pkg/proto v0.0.0-00010101000000-000000000000
 	github.com/golang/mock v1.6.0
 	github.com/golang/protobuf v1.5.4
 	github.com/google/gofuzz v1.2.0
@@ -19,7 +20,6 @@ require (
 
 require (
 	github.com/davecgh/go-spew v1.1.1 // indirect
-	github.com/google/go-cmp v0.6.0 // indirect
 	github.com/philhofer/fwd v1.1.2 // indirect
 	github.com/pmezard/go-difflib v1.0.0 // indirect
 	github.com/vmihailenco/tagparser v0.1.1 // indirect
@@ -31,3 +31,5 @@ require (
 	google.golang.org/genproto/googleapis/rpc v0.0.0-20230822172742-b8732ec3820d // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 )
+
+replace github.com/DataDog/datadog-agent/pkg/proto => ./
